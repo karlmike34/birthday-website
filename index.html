@@ -1,0 +1,183 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff0f5">
+    <title>Happy Birthday Ella!</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- WELCOME SCREEN -->
+    <section class="screen" id="welcome">
+        <div class="pixel-heart">♥</div>
+
+        <img
+            class="dog"
+            src="https://media.tenor.com/2roX3uxz_68AAAAC/dog-smile.gif"
+            alt="Smiling dog"
+        >
+
+        <p class="eyebrow">♡ MY LITTLE SURPRISE ♡</p>
+        <h1>HI BEAUTIFUL!</h1>
+        <p>Do you want to see my surprise?</p>
+
+        <div class="buttons">
+            <button id="yes">YES!</button>
+            <button id="no" class="secondary">NO</button>
+        </div>
+    </section>
+
+    <!-- NO SCREEN -->
+    <section class="screen hidden" id="no-page">
+        <div class="pixel-heart"></div>
+        <h1>HOW DARE YOU!</h1>
+        <p>Go back!! :(</p>
+        <button id="back">GO BACK</button>
+    </section>
+
+    <!-- BIRTHDAY SECTION -->
+    <section class="screen hidden" id="birthday">
+        <p class="eyebrow"> TODAY IS YOUR DAY !</p>
+
+        <h1>HAPPY BIRTHDAY<br><span>ELLA!</span></h1>
+
+        <div class="pixel-decor">✦ 🎀 ♥ 🎂 ✦</div>
+
+        <div class="photos three">
+            <img src="9a0225bd-db51-43f3-a763-338a501a0bef.jpg" alt="Ella photo 1">
+            <img src="2d197d31-551a-43b9-ac56-778569c89f82.jpg" alt="Ella photo 2">
+            <img src="edb60b7a-2a4d-4430-9356-2b46ca23a228.jpg" alt="Ella photo 3">
+        </div>
+
+        <a class="scroll" href="#gift">SCROLL DOWN ↓</a>
+    </section>
+
+    <!-- GIFT SECTION -->
+    <section class="screen hidden" id="gift">
+        <p class="eyebrow">MY LITTLE GIFT FOR YOU</p>
+
+        <div class="gift">
+            <div class="gift-bow">◆</div>
+            <div class="gift-lid"></div>
+            <div class="gift-box"><span>♥</span></div>
+        </div>
+
+        <button id="open">OPEN</button>
+    </section>
+
+    <!-- LETTER POPUP -->
+    <div class="modal hidden" id="letter">
+        <div class="letter">
+            <button id="close" class="close" aria-label="Close letter">X</button>
+
+            <div class="pixel-heart"></div>
+            <p class="eyebrow">♡ LETTER FOR YOU ♡</p>
+
+            <h2>HAPPY BIRTHDAY ELLA!</h2>
+
+            <p class="message">
+                I love you so muchh! I'm really happy to have you
+                in my lifee. You mean a lot to me, and I hope you
+                have the happiest birthday everr!
+            </p>
+
+            <p class="message">
+                Enjoy your special day my lovee. You deserve all
+                the love and happiness! 🎂💗
+            </p>
+
+            <h2>I LOVE YOUUU!</h2>
+            <div class="letter-hearts">♡ ♡ ♡</div>
+        </div>
+    </div>
+
+    <!-- MEMORIES AND MUSIC -->
+    <section class="screen hidden" id="memories">
+        <p class="eyebrow"> What a Baddie :> </p>
+        <h1>MY FAVORITE GIRL</h1>
+
+        <div class="photos four">
+            <img src="85c6b748-5b7c-41c0-9c35-0f03f54dac2a.jpg" alt="Ella memory 1">
+            <img src="f633fc0d-32f8-48b8-a3aa-f1e5e9363f0c.jpg" alt="Ella memory 2">
+            <img src="93607ea0-d7ae-4fac-ae42-35c43d16e805.jpg" alt="Ella memory 3">
+            <img src="9a91742f-cf9b-4615-9252-a176d3d4359e.jpg" alt="Ella memory 4">
+        </div>
+
+        <!-- MUSIC PLAYER -->
+        <div class="album">
+
+            <!-- ELLA'S PHOTO ONLY -->
+            <div class="album-art">
+                <img
+                    src="839c4c0f-e3e6-40a0-a8d2-0e81e63acaf8.jpg"
+                    alt="Ella album cover"
+                >
+            </div>
+
+            <p class="player-label">♫ NOW PLAYING ♫</p>
+            <h2>Just The Way You Are</h2>
+            <p class="artist">Bruno Mars</p>
+
+            <audio id="birthdaySong" preload="metadata">
+                <source
+                    src="Bruno%20Mars%20-%20Just%20The%20Way%20You%20Are%20(Lyrics).mp3"
+                    type="audio/mpeg"
+                >
+                Your browser does not support audio.
+            </audio>
+
+            <div class="player-controls">
+                <button
+                    id="playPause"
+                    class="play-button"
+                    aria-label="Play song"
+                    type="button"
+                >▶</button>
+
+                <div class="track">
+                    <input
+                        id="progress"
+                        type="range"
+                        min="0"
+                        max="100"
+                        value="0"
+                        step="0.1"
+                        aria-label="Song progress"
+                    >
+
+                    <div class="time">
+                        <span id="currentTime">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="volume-control">
+                <span>VOL ♫</span>
+                <input
+                    id="volume"
+                    type="range"
+                    min="0"
+                    max="1"
+                    step="0.05"
+                    value="0.8"
+                    aria-label="Volume"
+                >
+            </div>
+
+            <p id="playerStatus" class="player-status" role="status">
+                ♡ CLICK PLAY TO LISTEN ♡
+            </p>
+        </div>
+
+        <p class="footer">I HOPE YOU LIKE IT! HEHEH</p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
